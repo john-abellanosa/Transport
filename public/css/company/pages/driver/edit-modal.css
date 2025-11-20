@@ -1,0 +1,168 @@
+/* ===== Edit Driver Modal ===== */
+.driver-edit-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.3s ease;
+}
+
+.driver-edit-modal-content {
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideInEdit 0.3s ease;
+}
+
+@keyframes slideInEdit {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.driver-edit-close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.driver-edit-close-btn:hover {
+    color: #a40202;
+}
+
+.driver-edit-modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #000;
+}
+
+/* Edit Form Groups */
+.driver-edit-modal .form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.driver-edit-modal .form-group input:focus,
+.driver-edit-modal .form-group select:focus {
+    border-color: #045EF8;
+    box-shadow: 0 0 5px rgba(4, 94, 248, 0.3);
+    outline: none;
+}
+
+/* Actions */
+.driver-edit-modal .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.driver-edit-modal .form-actions .cancel-edit-btn {
+    background: #fff;
+    color: #313131;
+    border: 1px solid #777;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.driver-edit-modal .form-actions .cancel-edit-btn:hover {
+    background: #e1e1e1;
+}
+
+.driver-edit-modal .form-actions .submit-btn {
+    background: #046EF8;
+    color: #fff;
+    border: #046EF8;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.driver-edit-modal .form-actions .submit-btn:hover {
+    background: #0155c3;
+    border-color: #07294a;
+}
+
+.input-with-prefixs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.prefixs {
+    background: #f0f0f0;
+    padding: 6.7px 8px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 6px 0 0 6px; 
+    font-size: 14px;
+    color: #333;
+}
+
+.input-with-prefixs input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+}
+
+.input-with-prefixs input:focus {
+    border-color: #045EF8;
+    box-shadow: 0 0 5px rgba(4, 94, 248, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .driver-edit-modal-content {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .driver-edit-modal h2 {
+        font-size: 20px;
+    }
+
+
+    .driver-edit-modal .submit-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .driver-edit-close-btn {
+        font-size: 22px;
+        top: 10px;
+        right: 15px;
+    }
+
+}

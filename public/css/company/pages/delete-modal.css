@@ -1,0 +1,120 @@
+.delete-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.delete-modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+ 
+.delete-modal-box {
+  background: #FFFFFF;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 380px;
+  -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  overflow: hidden;
+}
+
+.delete-modal.show .delete-modal-box {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+ 
+.delete-modal-header {
+  background: #0a3360;
+  padding: 14px 18px;
+}
+
+.delete-modal-header h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+ 
+.delete-modal-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.delete-modal-body p {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+ 
+.delete-modal-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+  justify-content: center;
+  gap: 10px; 
+  padding: 12px 20px 18px;
+}
+
+.delete-modal-actions button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-transition: background 0.2s ease, -webkit-transform 0.1s ease;
+  transition: background 0.2s ease, -webkit-transform 0.1s ease;
+  -o-transition: background 0.2s ease, transform 0.1s ease;
+  transition: background 0.2s ease, transform 0.1s ease;
+  transition: background 0.2s ease, transform 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+.delete-modal-actions button:active {
+  -webkit-transform: scale(0.96);
+      -ms-transform: scale(0.96);
+          transform: scale(0.96);
+}
+ 
+.delete-cancel {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.delete-cancel:hover {
+  background: #d5d5d5;
+}
+ 
+.delete-confirm {
+  background: #ce1f0b;
+  color: #fff;
+}
+
+.delete-confirm:hover {
+  background: rgb(165, 45, 31);
+}
