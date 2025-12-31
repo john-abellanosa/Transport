@@ -1,6 +1,6 @@
 @extends('admin.layout.layout')
 
-@section('title', 'Admin Login - Company')
+@section('title', 'Admin Panel - Company')
 @section('content')
     <!DOCTYPE html>
     <html lang="en">
